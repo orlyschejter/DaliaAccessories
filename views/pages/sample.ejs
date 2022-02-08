@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include ("../partials/header.ejs") %>
+</head>
+
+<body>
+
+<%- include ("../partials/nav.ejs") %>
+
+<p>First name is <%= first %>.</p>
+<p>Last name is <%= last %>.</p>
+<p>Extra string is <%= hello %>.</p>
+
+<% for (let i = 0; i < dishes.length; i++) { %>
+    Name: <%= dishes[i].name %> <br/>
+    Description: <%= dishes[i].description %> <br/>
+<% } %>
+</body>
+</html>
