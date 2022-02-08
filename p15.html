@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+<head>
+  <link rel=”stylesheet” href=”http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css”>
+  <script src=”https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js”></script>
+  <script src=”http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js”></script>
+  <script>
+    var ring = [
+      {
+        "name": "Classic Combo",
+        "price":"75.000",
+        "description":"Dos disenos exclusivos de la marca. Este par de anillos estan inspirados en joyería marroquí"
+      },
+      {
+        "name": "Colombian Street Style",
+        "price":"75.000",
+        "description":"Inspirados en diseños Colombianos, estos anillos combinan con todo"
+      },
+      {
+        "name": "Anillos de corazones",
+        "price":"55.000",
+        "description":"Los anillos de corazones son clásicos de Dalia. Estilo juvenil y versátil"
+      },
+      {
+        "name": "Anillos de corazones",
+        "price":"55.000",
+        "description":"Clasicos anillos de corazones de Dalia. Inspirados en moda Colombiana"
+      },
+
+      {
+        "name": "Blue King",
+        "price":"55.000",
+        "description":"Anillos de Jamsa, corazones y clásicos en tono azul rey. Este color definitivamente que nunca falla"
+      },
+      {
+        "name": "Red Vibes",
+        "price":"Precio por pieza:\n" +
+                "Large Eye Ring: $75.000\n" +
+                "Love Ring : 60.000\n" +
+                "Small Eye Ring and Small Classic: 55.000\n" +
+                "\n" +
+                "Suscribete\n",
+        "description":"Segun varias culturas, utilizar el color rojo en una prenda es clave para protección del mal de ojo. Por eso mismo, las siguientes piezas representan el complemento de protección y estilo perfecto"
+      },
+      {
+        "name": "Blue King Rings",
+        "price":" 55.000",
+        "description":"(De izquierda a derecha) Combinación de azul rey con dorado y un diseño único contra el mal de ojo."
+      },
+      {
+        "name": "Moroccan Rings",
+        "price":"57.000",
+        "description":"Clásico combo marroquí. Debido a sus colores neutros, estos dos estilos son para uso diario debido a sus tonos practicos y diseño clásico.\n" +
+                "\n"
+      },
+      {
+        "name": "Love Rings",
+        "price":"55.000",
+        "description":"Diseño de corazones. Este diseño es uno de nuestros mayores exitos y ha sido catalogado por una mayoria de nuestros clientes como favorito"
+      },
+      {
+        "name": "Turquoise Rings",
+        "price":"55.000",
+        "description":"Nuestros diseños en tono azul turquesa son ideales, vienen con variedad de diseños que le proporcionan unicidad a tu forma de vestir\n" +
+                "\n"
+      },
+      {
+        "name": "Valentine Rings",
+        "price":"Precio por pieza:\n" +
+                "tamaño medio: 55.000\n" +
+                "tamaño grueso: 75.000\n" +
+                "\n",
+        "description":"Combinación única. Colores blanco y rojo junto al clásico \"Love Ring\" y diseño de elefante.\n"
+
+      }, {
+        "name": "Blue Love Ring",
+        "price":"Precio por pieza:\n" +
+                "tamaño medio: 55.000\n" +
+                "tamaño grueso: 75.000\n" +
+                "\n",
+        "description":"Uno de nuestros diseños favoritos; El Blue Love King ha sido catalogado por varios de nuestros clientes como el mas apetecido."
+      }
+      , {
+        "name": "Coral Rings",
+        "price":"60.000",
+        "description":"Diseños de tamaño medio con corazones de color. Este diseño es personalizado y puedes escoger el color de los corazones a tu gusto."},
+      {
+        "name": "Blue Love Ring Delgado",
+        "price":"50.000",
+        "description":"Uno de nuestros diseños favoritos; El Blue Love King ha sido catalogado por varios de nuestros clientes como el mas apetecido."},
+
+      {
+        "name": "Red Love Ring",
+        "price":"57.000",
+        "description":"Este anillo de color rojo es ideal para utilizar con cartera de tamaño medio roja. Es una anillo que llama mucho la atención y mantiene un estilo clásico y sencillo"},
+      {
+        "name": "Variety Pack",
+        "price":"Precio por paquete: 150.000\n" +
+                "Precio por pieza: 55.000",
+        "description":"Este paquete de anillos esta compuesto por distintos diseños versatiles. Anillos de protección contra el mal de ojo y diseños de estilo marroquí."},
+
+      {
+        "name": "Rose 217 Rings",
+        "price":"Precio por pieza: (De izquierda a derecha)\n" +
+                "Medium Jumbo: 60.000 Eye Ring: 55.000 Love Ring: 57.000 Large Eye Ring: 75.000",
+        "description":"Anillos palo de rosa de varios diseños y tamaños. Este accesorio destaca la feminidad de nosotras con uno de los tonos más pálidos que tenemos."},
+      {
+        "name": "Love Ring",
+        "price":"55.000",
+        "description":"Diseño de corazones. Este diseño es uno de nuestros mayores exitos y ha sido catalogado por una mayoria de nuestros clientes como favorito"}
+
+    ]
+
+    var render = function(data) {
+      var app = document.getElementById('app');
+      var booksHTMLString = '<ul>'+
+              data.map(function(ring){
+                return '<li>'+
+                        '<strong>Name:</strong>' + ring.name + '<br/>' +
+                        '<strong>Price: </strong>' + ring.price + '<br/>' +
+                        '<strong>Description: </strong>' + ring.description + '<br/>' +
+                        '
+                '</li>';
+              }).join('');
+      + '</ul>';
+
+      app.innerHTML = booksHTMLString;
+    }
+    render(ring);
+
+    var handleSearch = function(event) {
+      event.preventDefault();
+      // Get the search terms from the input field
+      var searchTerm = event.target.elements['search'].value;
+      // Tokenize the search terms and remove empty spaces
+      var tokens = searchTerm
+              .toLowerCase()
+              .split(' ')
+              .filter(function(token){
+                return token.trim() !== '';
+              });
+      if(tokens.length) {
+        //  Create a regular expression of all the search terms
+        var searchTermRegex = new RegExp(tokens.join('|'), 'gim');
+        var filteredList = ring.filter(function(ring){
+          // Create a string of all object values
+          var ringString = '';
+          for(var key in ring) {
+            if(ring.hasOwnProperty(key) && ring[key] !== '') {
+              ringString += ring[key].toString().toLowerCase().trim() + ' ';
+            }
+          }
+          // Return book objects where a match with the search regex if found
+          return ringString.match(searchTermRegex);
+        });
+        // Render the search results
+        render(filteredList);
+      }
+    };
+
+    document.addEventListener('submit', handleSearch);
+    document.addEventListener('reset', function(event){
+      event.preventDefault();
+      render(ring);
+    })
+  </script>
+  <script src="Daliafunctions.js">
+    function Options(value){
+      //get the input
+
+      let x=document.getElementById('search').value;
+
+      alert(x);
+      //process
+
+
+      if (x=='Red Love'){
+        window.location.href= "/Users/orlyschejter/WebstormProjects/DALIA/pic3.html";
+        window.replace("/Users/orlyschejter/WebstormProjects/DALIA/pic3.html");
+      }
+
+    }
+    window.onload=function(){
+      document.getElementById("myaudio").play();
+    }
+  </script>
+
+
+  <style>
+
+    title {
+      width: 100%;
+      height:100%
+
+    }
+
+    body {
+      background-color:#eec4cc;
+      background-size: 50% auto;
+      width:100%;
+
+    }
+    h1 {
+      display: block;
+      font-size: 2em;
+      margin-top: 50;
+      margin-bottom: 50;
+      margin-left: 50;
+      margin-right: 50;
+      font-weight: bold;
+      color: white;
+      width: 50%;
+      height:50%;
+      text-align:center;
+    }
+
+    header * {
+      display: inline;
+    }
+    header li {
+      margin: 70px;
+    }
+    header li a{
+      color: white;
+      text-decoration-color: coral;
+      scroll-padding-top: 5px;
+    }
+    p{
+      margin:20px;
+      color:white;
+      size:20em;
+    }
+
+
+    .footer{
+      size: 10em;
+      color:white;
+      margin:20px;
+      text-align:center;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 2.5rem;            /* Footer height */
+    }
+    footer:focus{
+
+      text-decoration-color: #0006CC;
+    }
+
+    a:hover{
+      background: #B3B3B3;
+      color:blue;
+      size: 120px;
+    }
+    a:focus{
+      background: #B3B3B3;
+      color: #0006CC;
+    }
+    a:active{
+      border: 3px solid #0006CC;
+      background: #0006CC;
+      color:seashell;
+    }
+  </style>
+  <div class="search-container">
+    <h2 align="left">
+      <form  action="Search"id="search-books" id="form" type="search" id="query"placeholder="Search...">
+        <label for="search">Search:</label>
+        <input type="text" name="search" id="search">
+        <button name="search_btn">Search</button>
+        <button name="reset" type="reset">Reset</button>
+      </form>
+  </div>
+
+
+</head>
+<body onload="AudioPlay">
+
+
+<center><h1 onmouseover= "this.style.color = 'pink'" onmouseout= "this.style.color= 'white'"><i>DALIA ACCESORIOS</i></h1></center>
+
+<script type="text/javascript" src="/Users/orlyschejter/WebstormProjects/DALIA/Daliafunctions.js"></script>
+<header>
+  <link rel="stylesheet" href= " https://github.com/lipis/bootstrap-social/blob/gh-pages/bootstrap-social.scss">
+  <nav>
+    <nav class="navbar navbar-dark navbar-expand-sm bg-primary fixed-top">
+      <div class="container">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active"><a class="nav-link" href="./DALIAvscode.html">Acerca de nosotros</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="./page1Dalia.html">Nuestros productos</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="./rebajas.html">Rebajas</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="./Subscribe.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
+
+    </nav>
+</header>
+<br>
+<br>
+<body>
+<div class="media">
+  <img class="d-flex mr-3 img-thumbnail align-self-center"
+       src="./pic16.jpeg" alt="ring" width=" 50%" height="50%">
+  <div class="media-body">
+    <h2 class="mt-0">Coral Rings </span></h2>
+    <p   class="d-none d-sm-block">Diseños de tamaño medio con corazones de color. Este diseño es personalizado y puedes escoger el color de los corazones a tu gusto.  </p>
+    <p class="d-none d-sm-block">  Precio por pieza: 60.000  </p>
+  </div>
+</div>
+
+</body>
+
+
+<audio autoplay>
+  <source src="song1.mp3" id=myaudio type="audio/mpeg">
+</audio>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" color=" blue"/>
+<br>
+<br>
+<footer class="footer" id='footer' onclick="Subscribe()">
+  <div>
+    <span><a id= "client" href="./Subscribe.html">Suscribete</a></span>
+  </div>
+  <div class="text-center">
+    <a class="btn btn-social-icon btn-instagram" color="blue" href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
+  </div>
+
+</footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+</html>

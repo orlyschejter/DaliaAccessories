@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel=”stylesheet” href=”http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css”>
+  <script src=”https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js”></script>
+  <script src=”http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js”></script>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="es" >
+<head>
+  <link rel=”stylesheet” href=”http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css”>
+  <script src=”https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js”></script>
+  <script src=”http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js”></script>
+  <script src="Daliafunctions.js">
+    function Options(value){
+      //get the input
+
+      let x=document.getElementById('search').value;
+
+      alert(x);
+      //process
+
+
+      if (x=='Red Love'){
+        window.location.href= "/Users/orlyschejter/WebstormProjects/DALIA/pic3.html";
+        window.replace("/Users/orlyschejter/WebstormProjects/DALIA/pic3.html");
+      }
+
+    }
+    window.onload=function(){
+      document.getElementById("myaudio").play();
+    }
+  </script>
+
+
+  <style>
+
+    title {
+      width: 100%;
+      height:100%
+
+    }
+
+    body {
+      background-color:#eec4cc;
+      background-size: 50% auto;
+      width:100%;
+
+    }
+    h1 {
+      display: block;
+      font-size: 2em;
+      margin-top: 50;
+      margin-bottom: 50;
+      margin-left: 50;
+      margin-right: 50;
+      font-weight: bold;
+      color: white;
+      width: 50%;
+      height:50%;
+      text-align:center;
+    }
+
+    header * {
+      display: inline;
+    }
+    header li {
+      margin: 70px;
+    }
+    header li a{
+      color: white;
+      text-decoration-color: coral;
+      scroll-padding-top: 5px;
+    }
+    p{
+      margin:20px;
+      color:white;
+      size:20em;
+    }
+
+
+    .footer{
+      size: 10em;
+      color:white;
+      margin:20px;
+      text-align:center;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 2.5rem;            /* Footer height */
+    }
+    footer:focus{
+
+      text-decoration-color: #0006CC;
+    }
+
+    a:hover{
+      background: #B3B3B3;
+      color:blue;
+      size: 120px;
+    }
+    a:focus{
+      background: #B3B3B3;
+      color: #0006CC;
+    }
+    a:active{
+      border: 3px solid #0006CC;
+      background: #0006CC;
+      color:seashell;
+    }
+  </style>
+
+  <div class="search-container">
+    <h2 align="left">
+      <form  action="Search" id="search-books" id="form" type="search" id="query"placeholder="Search...">
+        <label for="search">Search:</label>
+        <input type="text" name="search" id="search">
+        <button name="search_btn">Search</button>
+        <button name="reset" type="reset">Reset</button>
+      </form>
+  </h2></div>
+
+</head>
+<body onload="AudioPlay">
+
+
+<center><h1 onmouseover= "this.style.color = 'pink'" onmouseout= "this.style.color= 'white'"><i>DALIA ACCESORIOS</i></h1></center>
+
+<script type="text/javascript" src="/Users/orlyschejter/WebstormProjects/DALIA/Daliafunctions.js"></script>
+<header>
+  <link rel="stylesheet" href= " https://github.com/lipis/bootstrap-social/blob/gh-pages/bootstrap-social.scss">
+  <nav>
+    <nav class="navbar navbar-dark navbar-expand-sm bg-primary fixed-top">
+      <div class="container">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active"><a class="nav-link" href="./DALIAvscode.html">Acerca de nosotros</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="./page1Dalia.html">Nuestros productos</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="./rebajas.html">Rebajas</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="./Subscribe.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
+
+    </nav>
+</header>
+<br>
+<br>
+<body>
+<div class="media">
+  <img class="d-flex mr-3 img-thumbnail align-self-center"
+       src="./pic8.jpeg" alt="ring" width=" 50%" height="50%">
+  <div class="media-body">
+    <h2 class="mt-0">La Dolce Vita Rings </span></h2>
+    <p   class="d-none d-sm-block">Ubicado a mano izquierda de la imagen, este exclusivo diseño ha sido un protagonista de la marca. La combinación de un tono dorado con Azul, Rojo o Blanco puede ser la pieza solución de tu pinta diaria   </p>
+    <p class="d-none d-sm-block"> Precio por pieza: $57.000 </p>
+  </div>
+</div>
+
+</body>
+
+
+<audio autoplay>
+  <source src="song1.mp3" id=myaudio type="audio/mpeg">
+</audio>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" color=" blue"/>
+
+<footer class="footer" id='footer' onclick="Subscribe()">
+  <div>
+    <span><a id= "client" href="./Subscribe.html">Suscribete</a></span>
+  </div>
+  <div class="text-center">
+    <a class="btn btn-social-icon btn-instagram" color="blue" href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
+  </div>
+
+</footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

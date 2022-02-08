@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <link rel=”stylesheet” href=”http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css”>
+    <script src=”https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js”></script>
+    <script src=”http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js”></script>
+    <script>
+    <script src="Daliafunctions.js"></script>
+<style>
+
+title {
+  width: 100%;
+  height:100%
+
+}
+body {
+  background-image: url('PIC2.jpeg');
+
+}
+#subscribeform{
+
+  -ms-text-size-adjust: auto;
+  size: 5px;
+  color: black;
+}
+#pongase{
+  -ms-text-size-adjust: auto;
+  size: 5px;
+  color: black;
+}
+
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-top: 50;
+  margin-bottom: 50;
+  margin-left: 50;
+  margin-right: 50;
+  font-weight: bold;
+  color: white;
+  width: 50%;
+  height:50%;
+  text-align:center;
+}
+h2{
+
+  font-size: 2em;
+  margin-top: 100;
+  margin-bottom: 100;
+  margin-left:50;
+  margin-right: 50;
+  font-weight: bold;
+  color: white;
+  width: 100%;
+  height:300px;
+  align-items:center;
+  display:flex;
+  justify-content:center;
+  font-size:0.8em;
+}
+
+.wrapper{
+    min-height: 100vh;
+    place-items:center;
+}
+
+header * {
+display: inline;
+}
+header li {
+margin: 70px;
+}
+header li a{
+    color: white;
+    text-decoration-color: coral;
+    scroll-padding-top: 5px;
+}
+p{
+    margin:20px;
+    color:white;
+    size:20em;
+}
+
+.footer{
+    size: 10em;
+    color:blue;
+    margin:20px;
+    text-align:center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;            /* Footer height */
+}
+div{
+
+    font-size:2.0rem;
+    text-align:center;
+    text-decoration-color: coral;
+    margin:10px;
+    position: center;
+    vertical-align:middle;
+    line-height:90px;
+    padding: 0.5em 0 0.5em 1.5em;
+    line-height: 3;
+    width: 100%;
+    border-radius: 0.5em;
+  margin-bottom: 1em;
+}
+span{
+    align-items: center;
+}
+
+
+
+
+</style>
+
+
+</head>
+
+
+<title> Subscribe</title>
+<center><h1 onmouseover= "this.style.color = 'pink'" onmouseout= "this.style.color= 'white'"><i>DALIA ACCESORIOS</i></h1></center>
+
+<script type="text/javascript" src="./Daliafunctions.js"></script>
+<header class="linea">
+  <nav>
+    <nav class="navbar navbar-dark navbar-expand-sm bg-primary fixed-top">
+      <span class="container">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="./DALIAvscode.html">Acerca de nosotros</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="./page1Dalia.html"">Nuestros productos</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="./rebajas.html">Rebajas</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="./Subscribe.html">Contacto</a>
+          </li>
+        </ul>
+
+
+
+      </span>
+
+    </nav>
+  </nav>
+
+
+<body>
+<div>
+    <section>
+      <div class="col-12 col-md-9">
+<br>
+          <form method="POST" action="./thankyou.html">
+        Name:<input type="text" id="firstname" placeholder= "Name..."name="first"><br />
+        Last Name:<input id="lastname" type="text" placeholder= "Last Name..."name="last"><br />
+        Email:<input id= "email" type="text" placeholder= "Email..."name="email"><br />
+        Phone:<input type="text" id= "phone" placeholder= "Phone..."name="phone"><br />
+        <div class="col-md-10">
+          <input href=./thankyou.html type="submit" value="Submit" placeholder="Submit..."><br>
+        </div>
+      </form>
+
+
+<div class="form-group row">
+  <div class=" col-md-6 offset-md-2">
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" name="approve" id="approve"
+             name="approve" id="approve" value="">
+      <label id= subscribeform class="form-check-label" for="approve">
+        <strong> Lo podemos contacar? </strong>
+      </label>
+    </div>
+    <div class="col-12 col-sm align-self-center">
+      <a role="button" class="btn btn-block nav-link btn-warning" id="pongase" data toggle="tooltip" data-html="true" title="O llamenos al +57 322 2518514"
+         data-placement="buttom" href="#subscribeform"> Pongase en contacto</a>
+
+    </div>
+
+  </div>
+  </div>
+  <div class="col-md-3 offset-md-1">
+    <select class="form-control">
+      <option>Phone</option>
+      <option>Email</option>
+
+    </select>
+</body>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" color=" blue"/>
+
+
+
+        <footer class="footer" id='footer' onclick="Subscribe()">
+            <div>
+                <span><a id= "client" href="./Subscribe.html">Suscribete</a></span>
+            </div>
+            <div class="text-center">
+                <a class="btn btn-social-icon btn-instagram" color="blue" href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
+            </div>
+
+        </footer>
+
+
+
+
+
+</html>
+
+<!--https://www.javatpoint.com/oprweb/test.jsp?filename=how-to-make-a-navigation-bar-in-html1
+
+
