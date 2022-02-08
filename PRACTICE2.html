@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+  <script src="https://rawgit.com/farzher/fuzzysort/master/fuzzysort.js"></script>
+  <script>
+    function searchring() {
+  let input = document.getElementById('query').value
+  input=input.toLowerCase();
+  let x = document.getElementsByClassName('ring')
+
+  for (i = 0; i < x.length; i++) {
+  if (!x[i].innerHTML.toLowerCase().includes(input)) {
+  x[i].style.display="none";
+  }
+  else {
+  x[i].style.display="list-item";
+  }
+  }
+  }
+  </script>
+
+  //jquery to redirect
+
+  <script> $(document).ready(function Redirect() { var url = "./product8.html"; $(location).attr('href',url); }); </script>
+
+
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel=”stylesheet” href=”http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css”>
+  <script src=”https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js”></script>
+  <script src=”http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js”></script>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="es" >
+<head>
+  <link rel=”stylesheet” href=”http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css”>
+  <script src=”https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js”></script>
+  <script src=”http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js”></script>
+  <script src="Daliafunctions.js">
+
+    window.onload=function(){
+      document.getElementById("myaudio").play();
+    }
+  </script>
+  <script>
+
+    function search_ring() {
+      let input = document.getElementById('query').value
+      input = input.toLowerCase();
+      let x = document.getElementsByClassName('rings');
+
+      for (i = 0; i < x.length; i++) {
+        if (x[i].innerHTML.toLowerCase().includes(input)) {
+          x[i].style.display ="list-item" ;
+        } else {
+          x[i].style.display = "none";
+        }
+
+      }
+      for (i = 0; i < x.length; i++) {
+      if( x[i].innerHTML.toLowerCase==input){
+        location.href= 'product8.html';
+      }
+    }
+    }
+
+  </script>
+
+  <script type="text/javascript">
+    document.getElementById("nyring").onclick = function () {
+      location.href = "./p22.html";
+    };
+  </script>
+
+
+  <style>
+
+    title {
+      width: 100%;
+      height:100%
+
+    }
+
+    body {
+      background-color:#eec4cc;
+      background-size: 50% auto;
+      width:100%;
+
+    }
+    h1 {
+      display: block;
+      font-size: 2em;
+      margin-top: 50;
+      margin-bottom: 50;
+      margin-left: 50;
+      margin-right: 50;
+      font-weight: bold;
+      color: white;
+      width: 50%;
+      height:50%;
+      text-align:center;
+    }
+
+    header * {
+      display: inline;
+    }
+    header li {
+      margin: 70px;
+    }
+    header li a{
+      color: white;
+      text-decoration-color: coral;
+      scroll-padding-top: 5px;
+    }
+    p{
+      margin:20px;
+      color:white;
+      size:20em;
+    }
+    #content {
+      border:1px solid black;
+    }
+    #content > div {
+      height:100px;
+      box-sizing:border-box;
+      -moz-box-sizing:border-box;
+    }
+    #left {
+      float:left;
+      width: 50%;
+      border-right:1px solid black;
+    }
+    #right {
+      float:right;
+      width: 50%;
+    }
+    #bottom {
+      border-top:1px solid black;
+      clear: both;
+    }
+
+
+    .footer{
+      size: 10em;
+      color:white;
+      margin:20px;
+      text-align:center;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 2.5rem;            /* Footer height */
+    }
+    footer:focus{
+
+      text-decoration-color: #0006CC;
+    }
+
+    a:hover{
+      background: #B3B3B3;
+      color:blue;
+      size: 120px;
+    }
+    a:focus{
+      background: #B3B3B3;
+      color: #0006CC;
+    }
+    a:active{
+      border: 3px solid #0006CC;
+      background: #0006CC;
+      color:seashell;
+    }
+  </style>
+  <div class="search">
+    <div id="search1">
+      <object align= left>
+        <form method="POST" action="#">
+          <input id="query" onkeyup="search_ring()" type="text"
+                 name="search" placeholder="Search..">
+          <input type="submit" value="search here">
+
+
+          <ol id='list'>
+            <li onclick=Redirect() id= "nyring" class="rings">New York Ring</li>
+            <li class="rings">Blue King Rings</li>
+            <li class="rings">Coral Ring</li>
+            <li class="rings">Love Ring</li>
+            <li class="rings">Classic Combo</li>
+            <li class="rings">Colombian Street Style</li>
+            <li class="rings">La Dolce Vita Rings</li>
+            <li class="rings">Morrocan Rings</li>
+            <li class="rings">Red Vibes</li>
+            <li class="rings">Turquoise Rings</li>
+            <li class="rings">Valentine Rings</li>
+            <li class="rings">Blue Love Ring</li>
+            <li class="rings">Variety Pack</li>
+            <li class="rings">Red Love Ring</li>
+            <li class="rings">Rose 217 Rings</li>
+          </ol>
+
+
+        </form>
+      </object>
+    </div>
+  </div>
+
+
+</head>
+<body onload="AudioPlay">
+
+
+<center><h1 onmouseover= "this.style.color = 'pink'" onmouseout= "this.style.color= 'white'"><i>DALIA ACCESORIOS</i></h1></center>
+
+<script type="text/javascript" src="/Users/orlyschejter/WebstormProjects/DALIA/Daliafunctions.js"></script>
+<header>
+  <link rel="stylesheet" href= " https://github.com/lipis/bootstrap-social/blob/gh-pages/bootstrap-social.scss">
+  <nav>
+    <nav class="navbar navbar-dark navbar-expand-sm bg-primary fixed-top">
+      <div class="container">
+        <div class="search-container">
+          <form action="/action_page.php">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active"><a class="nav-link" href="./DALIAvscode.html">Acerca de nosotros</a>
+          </li>
+          <li class="active"class="nav-item"><a class="nav-link" href="./page1Dalia.html">Nuestros productos</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Rebajas</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="./Subscribe.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
+
+    </nav>
+</header>
+<br>
+<br>
+<body>
+<div class="media">
+  <img class="d-flex mr-3 img-thumbnail align-self-center"
+       src="./PIC2.jpeg" alt="ring" width=" 50%" height="50%">
+  <div class="media-body">
+    <h2 class="mt-0">Valentine Rings </span></h2>
+    <p   class="d-none d-sm-block">Combinación única. Colores blanco y rojo junto al clásico "Love Ring" y diseño de elefante. </p>
+    <p class="d-none d-sm-block"> Precio por pieza: <br> tamaño medio: 55.000 <br> tamaño grueso: 75.000</p>
+  </div>
+</div>
+
+</body>
+
+
+<audio autoplay>
+  <source src="song1.mp3" id=myaudio type="audio/mpeg">
+</audio>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" color=" blue"/>
+
+<footer class="footer" id='footer' onclick="Subscribe()">
+  <div>
+    <span><a id= "client" href="./Subscribe.html">Suscribete</a></span>
+  </div>
+  <div class="text-center">
+    <a class="btn btn-social-icon btn-instagram" color="blue" href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
+  </div>
+
+</footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+</html>
